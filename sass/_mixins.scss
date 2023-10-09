@@ -1,0 +1,89 @@
+@mixin responive1024{
+    @media screen and (min-width:1024px){
+        body{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $Dark-Slate-Grey;
+            .home-page{
+                width: 80%;
+                height: 80%;
+                flex-direction:row-reverse;
+                align-items: center;
+                background-color: $White;
+                border-radius: 3.2rem;
+                border-bottom-right-radius: 15px;
+                .img{
+                    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+                    height: 100%;
+                    width: 50%;
+                }
+                .bottom-section{
+                    width: 50%;
+                    height: 90%;
+                    align-items: center;
+                    justify-content: center;
+                    .informations{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}
+@mixin responsive {
+    @media only screen and (min-width:768px) and (max-width:1023px) {
+        .home-page{
+            .img{
+                height: 500px;
+            }
+            // Section
+            .bottom-section{
+                padding: 3rem 3rem;
+                height: 100%;
+                .informations{
+                    h1{
+                        font-size: 3rem;
+                    }
+                    .info{
+                        font-size: 2rem;
+                    }
+                    // Lists
+                    .list{
+                        li{
+                            p{
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                    // Form 
+                    .form-container{
+                        height: 350px;
+                        form{
+                            .valid{
+                                h4 , h5{
+                                    font-size: 1.8rem;
+                                }
+                            }
+                            input{
+                                height: 120px;
+                                font-size: 2rem;
+                                &::placeholder{
+                                    font-size: 2rem;
+                                }
+                            }
+                            button{
+                                height: 120px;
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
