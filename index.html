@@ -37,12 +37,12 @@
         
         <!-- Form -->
         <div class="form-container">
-          <form>
+          <form id="form">
             <div class="valid">
               <h4>Email address</h4>
-              <h5>Valid email required</h4>
+              <h5 id="h5">Valid email required</h4>
             </div>
-            <input  type="text" placeholder="email@company.com">
+            <input id="input" type="text" placeholder="email@company.com">
             <button type="submit">Subscribe to monthly newsletter</button>
           </form>
         </div>
@@ -52,12 +52,14 @@
 
   <!-- Success Message -->
   <div class="success-container">
-    <img src="./assets/images/icon-success.svg">
+   <div><img src="./assets/images/icon-success.svg"></div>
     <div class="message">
       <h1>Thanks for subscribing!</h1>
-      <p> A confirmation email has been sent to ash@loremcompany.com. 
+      <p> A confirmation email has been sent to <span id="span">ash@loremcompany</span>.com. 
       Please open it and click the button inside to confirm your subscription.</p>
-      <button type="button"> Dismiss message </button>
+        <div class="button">
+          <button id="return" type="button"> Dismiss message </button>
+        </div>
     </div>
   </div>
 

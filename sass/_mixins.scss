@@ -1,6 +1,8 @@
 @mixin responive1024{
     @media screen and (min-width:1024px){
         body{
+            min-height: 100vh;
+            position: fixed;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -9,7 +11,7 @@
             background-color: $Dark-Slate-Grey;
             .home-page{
                 width: 80%;
-                height: 80%;
+                height: 1200px;
                 flex-direction:row-reverse;
                 align-items: center;
                 background-color: $White;
@@ -22,11 +24,42 @@
                 }
                 .bottom-section{
                     width: 50%;
-                    height: 90%;
+                    height: 900px;
                     align-items: center;
                     justify-content: center;
                     .informations{
                         height: 100%;
+                    }
+                }
+            }
+        }
+        .success-container{
+            width: 600px;
+            height: 600px;
+            background-color: $White;
+            border-radius: 2rem;
+            padding: 5rem 3rem 0rem 3rem;
+            margin-bottom: 0;
+            div{
+                margin-bottom: 3rem;
+                img{
+                    width: 70px;
+                }
+            }
+            .message{
+                h1{
+                    font-size: 3rem;
+                    line-height:3.2rem;
+                    margin-bottom: 2rem;
+                }
+                p{
+                    width: 100%;
+                    font-size: 1.3rem;
+                    line-height:2.3rem;
+                    margin-bottom: 4rem;
+                    font-weight: 500;
+                    span{
+                        font-weight: 700;
                     }
                 }
             }
@@ -85,5 +118,4 @@
             }
         }
     }
-
 }
