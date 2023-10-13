@@ -8,6 +8,7 @@ const Return = document.getElementById('return');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     
+    var span = document.getElementById('span');
     var value = input.value;
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -16,6 +17,8 @@ form.addEventListener('submit', function (e) {
         input.classList.remove('not-valid');
         homePage.classList.add('home-off');
         successMessage.classList.add('success-on');
+        span.textContent = value;
+
         return true;
     } else {
         h5.classList.add('h5');
